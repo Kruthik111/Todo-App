@@ -1,5 +1,4 @@
 import React from "react";
-import { IoIosArrowForward } from "react-icons/io";
 
 const GroupCard = ({ group, setSelected, setFilter }) => {
   function handleClick() {

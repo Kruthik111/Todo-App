@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import CircularProgress from "./CircularProgress";
 import { ListContext } from "../context/ListContext";
 import GroupCard from "./GroupCard";
-import { BiRightArrow } from "react-icons/bi";
-import { IoIosArrowDropright } from "react-icons/io";
 
 const Banner = () => {
   const { tasks } = useContext(ListContext);

@@ -1,15 +1,12 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import Modal from "../components/Modal";
 import AddTaskCard from "../components/AddTaskCard";
-import { Link } from "react-router-dom";
 import { ListContext } from "../context/ListContext";
 import { AiFillPlusCircle } from "react-icons/ai";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
-import GroupCard from "../components/GroupCard";
 import Banner from "../components/Banner";
 import TaskContainer from "../components/TasksContainer";
-import { FiFilter } from "react-icons/fi";
 import { BiFilter } from "react-icons/bi";
 import { FaHandPointUp } from "react-icons/fa";
 

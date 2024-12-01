@@ -22,8 +22,8 @@ const TaskCard = ({ task }) => {
   return (
     task && (
       <div
-        className={`[textShadow:0px_0px_3px_rgb(1_1_1_/_63%)] dark:[textShadow:0px_0px_3px_rgb(200_200_200_/_63%)]  flex justify-between items-center px-5 py-5    dark:bg-gray-800 dark:border-gray-700 max-w-2xl rounded-md text-white text-xl font-semibold  transition-all ease-in-out w-full duration-500 group border-2 border-gray-400 group bg-gray-100 shadow-lg ${
-          task.isComplete ? " text-red-500 line-through " : " dark:bg-gray-700 "
+        className={`[textShadow:0px_0px_3px_rgb(1_1_1_/_63%)] dark:[textShadow:0px_0px_3px_rgb(200_200_200_/_63%)]  flex justify-between items-center px-5 py-5   dark:bg-gray-800 dark:border-gray-700 max-w-2xl rounded-md text-xl font-semibold  transition-all ease-in-out w-full text-red-500 duration-500 group border-2 border-gray-400 group bg-gray-100 shadow-lg ${
+          task.isComplete ? " line-through   " : " dark:bg-gray-700 "
         }`}
         // style={{ textShadow: "0px 0px 4px rgb(1 1 1 / 63%)" }}
         onDoubleClick={handleChange}

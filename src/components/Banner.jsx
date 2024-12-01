@@ -8,7 +8,7 @@ const Banner = () => {
   const completed = tasks.filter((e) => e.isComplete == true).length;
   const { groups } = useContext(ListContext);
   return (
-    <div className="flex items-center w-full bg-transparent rounded-lg text-xl md:text-2xl py-5 md:px-9 space-y-5">
+    <div className="flex items-center w-full bg-transparent rounded-lg text-xl md:text-2xl sm:pt-5 md:px-9 ">
       {tasks.length > 0 && (
         <span className="shadow-lg shadow-black dark:shadow-slate-600  p-4 px-7 text-lg rounded-lg">
           <>
@@ -19,7 +19,7 @@ const Banner = () => {
           </>
         </span>
       )}
-      <div className="flex gap-2 overflow-auto scrollbar pb-6">
+      <div className="flex gap-2  overflow-auto scrollbar h-full items-center">
         {groups?.length > 0 &&
           groups.map((group, index) => (
             <GroupCard

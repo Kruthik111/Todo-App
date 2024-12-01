@@ -4,7 +4,7 @@ import useLocalStroage from "../utils/useLocalStorage";
 export const ThemeContext = createContext(null);
 
 const ThemeContextProvider = ({ children }) => {
-  const [theme, setTheme] = useLocalStroage("theme", "dark");
+  const [theme, setTheme] = useLocalStroage("theme", null);
   const toggleTheme = () => {
     setTheme(theme === "dark" ? null : "dark");
   };

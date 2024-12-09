@@ -5,6 +5,7 @@ const Required = () => <span className="text-red-600 font-bold">*</span>;
 
 const AddTaskCard = ({ closeAddTask, task }) => {
   const { tasks, groups, addTasks, updateTask } = useContext(ListContext);
+  const taskNameLength = 35;
 
   const [newTask, setNewTask] = useState(
     task
@@ -53,10 +54,12 @@ const AddTaskCard = ({ closeAddTask, task }) => {
           value={newTask.name}
           placeholder="Enter task name..."
           onChange={(e) => setNewTask({ ...newTask, name: e.target.value })}
-          maxLength={15}
+          maxLength={taskNameLength}
         />
         {newTask.name.length > 0 && (
-          <span className="text-xs">{newTask.name.length} / 15</span>
+          <span className="text-xs">
+            {newTask.name.length} / {taskNameLength}
+          </span>
         )}
         <label
           htmlFor="description"

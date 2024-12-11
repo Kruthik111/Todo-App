@@ -10,10 +10,7 @@ const App = () => {
     <div className={` ${theme}`}>
       <div className="px-4 md:px-10 lg:px-44 pt-5 bg-white  dark:bg-black   h-screen overflow-hidden font-mono itim-regular select-none ">
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/tasks" element={}/> */}
-        </Routes>
+        <Home />
       </div>
     </div>
   );

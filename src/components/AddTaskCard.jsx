@@ -36,7 +36,7 @@ const AddTaskCard = ({ closeAddTask, task }) => {
   }
 
   return (
-    <div className="bg-white p-10 px-3 sm:px-14 text-black dark:text-white dark:bg-indigo-500 rounded-lg text-lg">
+    <div className="bg-white p-10 px-3 sm:px-14 text-black dark:text-white dark:bg-gray-800 rounded-lg text-lg">
       <h1 className="text-3xl font-bold">
         {task ? "Edit Task" : "Add New Task"}
       </h1>

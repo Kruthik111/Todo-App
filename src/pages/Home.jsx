@@ -21,7 +21,7 @@ const Home = () => {
   const closeAddTask = () => setOpen(false);
 
   return (
-    <div className=" ">
+    <div>
       <div className="lg:px-10 xl:px-32">
         <Banner />
         <div className="flex justify-between text-lg font-bold cursor-pointer mb-5 text-gray-500">

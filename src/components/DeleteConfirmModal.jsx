@@ -6,7 +6,6 @@ const DeleteConfirmDialog = ({
   deleteTask,
   taskName = "",
 }) => {
-  const modalRef = useRef();
   function closeModal() {
     setDisplayModal(false);
   }
@@ -14,12 +13,8 @@ const DeleteConfirmDialog = ({
     deleteTask();
     setDisplayModal(false);
   }
-  useClickedOutside(modalRef, closeModal);
   return (
-    <div
-      className="bg-white w-80 h-36 dark:bg-black text-black dark:text-white rounded-lg p-5 z-20"
-      ref={modalRef}
-    >
+    <div className="bg-white w-80 h-36 dark:bg-black text-black dark:text-white rounded-lg p-5 z-20">
       <div>
         <h1>Do you want to delete the task {taskName}</h1>
       </div>

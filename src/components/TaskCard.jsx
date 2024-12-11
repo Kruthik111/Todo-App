@@ -63,7 +63,10 @@ const TaskCard = ({ task }) => {
         <Modal isOpen={open} onClickOutside={() => setOpen(false)}>
           <AddTaskCard closeAddTask={() => setOpen(false)} task={task} />
         </Modal>
-        <Modal isOpen={displayModal} onClickOutside={() => setOpen(false)}>
+        <Modal
+          isOpen={displayModal}
+          onClickOutside={() => setDisplayModal(false)}
+        >
           <DeleteConfirmDialog
             setDisplayModal={setDisplayModal}
             deleteTask={() => handleDelete(task.id)}

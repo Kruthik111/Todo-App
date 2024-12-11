@@ -6,10 +6,12 @@ import { IoPencilOutline } from "react-icons/io5";
 import { FaRegCircle } from "react-icons/fa";
 import AddTaskCard from "./AddTaskCard";
 import Modal from "./Modal";
+import DeleteConfirmDialog from "./DeleteConfirmModal";
 
 const TaskCard = ({ task }) => {
   const { updateTask, deleteTask } = useContext(ListContext);
   const [open, setOpen] = useState(false);
+  const [displayModal, setDisplayModal] = useState(false);
 
   function handleChange() {
     const updatedTask = { ...task, isComplete: !task.isComplete };
@@ -53,13 +55,20 @@ const TaskCard = ({ task }) => {
           <span
             className="text-red-700"
             title="Delete"
-            onClick={() => handleDelete(task.id)}
+            onClick={() => setDisplayModal(true)}
           >
             <MdDelete />
           </span>
         </span>
         <Modal isOpen={open} onClickOutside={() => setOpen(false)}>
           <AddTaskCard closeAddTask={() => setOpen(false)} task={task} />
+        </Modal>
+        <Modal isOpen={displayModal} onClickOutside={() => setOpen(false)}>
+          <DeleteConfirmDialog
+            setDisplayModal={setDisplayModal}
+            deleteTask={() => handleDelete(task.id)}
+            taskName={task.name}
+          />
         </Modal>
       </div>
     )

@@ -39,7 +39,7 @@ const TaskContainer = ({ tasks, filter }) => {
           type="search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          class="block p-3 ps-7 capitalize text-md text-gray-900 border border-gray-300 rounded-lg bg-gray-50  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white w-full md:w-10/12"
+          className="block p-3 ps-7 capitalize text-md text-gray-900 border border-gray-300 rounded-lg bg-gray-50  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white w-full md:w-10/12"
           placeholder="Search Tasks...."
           required
           autoFocus

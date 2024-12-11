@@ -24,13 +24,10 @@ const Home = () => {
     <div>
       <div className="lg:px-10 xl:px-32">
         <Banner />
-        <div className="flex justify-between text-lg font-bold cursor-pointer mb-5 text-gray-500">
+        <div className="flex justify-between text-lg font-bold cursor-pointer my-3 md:px-14 text-gray-500">
           <span className=" text-black dark:text-white  ">Tasks</span>
           {/* <span onClick={() => setShowTasks("completedfirst")}>nothing</span> */}
-          <span
-            // onClick={toggleSelected}
-            className=" text-gray-700 dark:text-gray-400 text-base font-sans font-bold"
-          >
+          <span className=" text-gray-700 dark:text-gray-400 text-base font-sans font-bold">
             <BiFilter size={30} />
           </span>
         </div>
@@ -56,7 +53,7 @@ const Home = () => {
       </div>
       {/* Add task Icon */}
       <span
-        className="inline fixed right-10 sm:right-20 bottom-20 rounded-full  dark:bg-white text-indigo-700"
+        className="inline fixed right-10 sm:right-20 bottom-24 md:bottom-20 rounded-full  dark:bg-white text-indigo-700"
         data-tooltip-id="add-task-tooltip"
         data-tooltip-content="Add New Task"
         data-tooltip-place="left"

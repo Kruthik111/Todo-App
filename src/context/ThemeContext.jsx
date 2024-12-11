@@ -1,7 +1,7 @@
 import React, { createContext } from "react";
 import useLocalStroage from "../utils/useLocalStorage";
 
-export const ThemeContext = createContext(null);
+export const ThemeContext = createContext();
 
 const ThemeContextProvider = ({ children }) => {
   const [theme, setTheme] = useLocalStroage("theme", null);

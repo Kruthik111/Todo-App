@@ -45,7 +45,7 @@ const TaskContainer = ({ tasks, filter }) => {
           autoFocus
         />
       </span>
-      <div className="flex flex-col items-center gap-3 my-4 max-h-[27rem] sm:max-h-64 overflow-auto scrollbar scroll-smooth">
+      <div className="flex flex-col items-center gap-3 my-4 max-h-80 sm:max-h-64 overflow-auto scrollbar scroll-smooth">
         {displayTask?.length > 0 &&
           displayTask.map((task) => <TaskCard key={task.id} task={task} />)}
       </div>

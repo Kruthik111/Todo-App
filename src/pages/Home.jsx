@@ -34,20 +34,6 @@ const Home = () => {
         <div>
           <span>
             <TaskContainer tasks={tasks} filter={filter} />
-            {/* uncomment it if you want completd task separately */}
-            {/*
-            <div className="flex flex-col gap-5 mb-4 ">
-              {tasks?.length > 0 &&
-                tasks.map(
-                  (task) => task.isComplete || <TaskCard task={task} />
-                )}
-            </div>
-             <div className="flex flex-col gap-5 ">
-              {tasks.length > 0 &&
-                tasks.map(
-                  (task) => task.isComplete && <TaskCard task={task} />
-                )}
-            </div> */}
           </span>
         </div>
       </div>
